@@ -5,7 +5,6 @@ class WorkoutTemplate < ActiveRecord::Base
   has_many :workout_exercises, as: :workout
 
   validates :name, :author_id, presence: true
-
   validates :is_public, inclusion: { in: [true, false] }
 
 end
